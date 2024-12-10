@@ -1,0 +1,28 @@
+.footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+}
+
+.subscribe > input {
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.subscribe > button {
+  background-color: red;
+  padding: 5px;
+  border: none;
+  color: white;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
