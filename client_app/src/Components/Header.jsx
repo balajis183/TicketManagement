@@ -12,14 +12,20 @@ function Header() {
           <a href="" className="nav-link">Register</a>
           <a href="" className="nav-link">Login </a> */}
 
-          <Link to="/home" className="nav-link">
+{/* //if you give class nav-bar some error due to ... in bootstrap nav-bar is a class */}
+
+
+          <Link to="/home" className="navbar-link">  
             Home
           </Link>
-          <Link to="/register" className="nav-link">
+          <Link to="/register" className="navbar-link">
             Register
           </Link>
-          <Link to="/login" className="nav-link">
+          <Link to="/login" className="navbar-link">
             Login
+          </Link>
+          <Link to="/places" className="navbar-link">
+            Places
           </Link>
         </div>
       </nav>

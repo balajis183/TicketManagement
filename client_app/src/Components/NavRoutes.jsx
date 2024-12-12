@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
+import Places from "../pages/Places";
 
 function NavRoutes() {
   return (
@@ -18,6 +19,8 @@ function NavRoutes() {
           <Route path="/home" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/places" element={<Places />} />
+          
         </Routes>
       </BrowserRouter>
     </div>
