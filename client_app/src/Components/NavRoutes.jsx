@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 import Places from "../pages/Places";
+import TicketBookPage from "../pages/TicketBookPage";
 
 function NavRoutes() {
   return (
@@ -20,6 +21,8 @@ function NavRoutes() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/places" element={<Places />} />
+          <Route path="/places/:id" element={<TicketBookPage />} />
+
           
         </Routes>
       </BrowserRouter>
