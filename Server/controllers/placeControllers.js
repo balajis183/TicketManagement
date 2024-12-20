@@ -50,7 +50,8 @@ const getSinglePlace = async (req, res) => {
   const id = req.params.id;
   try {
     const placeDoc = await place.findOne({ _id: id });
-    res.json({ place: placeDoc });
+    console.log(placeDoc);
+    res.json({ place: placeDoc , message:"fetched single place successfully" });
   } catch (err) {
     console.log(err);
     res.json({ message: "Error in server" });

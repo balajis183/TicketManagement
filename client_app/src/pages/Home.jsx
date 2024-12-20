@@ -39,7 +39,7 @@ function Home() {
   return (
     <Layout>
       {/* <h1>Home page </h1> */}
-      <h2 className="fw-semibold text-center text-warning p-2">
+      <h2 className="fw-semibold text-center text-success p-2">
         {" "}
         Select your travel destination
       </h2>

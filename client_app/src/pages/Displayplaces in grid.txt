@@ -1,0 +1,19 @@
+ function displayPlaces() {
+    return (
+        <div className="row"> {/* Bootstrap row */}
+            {places.map((place, index) => (
+                <div key={index} className="col-4 p-3"> {/* Each column takes up 2 spaces */}
+                    <div className="border border-primary p-3">
+                        <h2 className="fw-light">{place.placeName}</h2>
+                        <p>{place.placeDescription}</p>
+                        <p>{place.placeAddress}</p>
+
+                        <Link to={`/places/${place._id}`}>
+                            <button className="btn btn-primary">Book Now</button>
+                        </Link>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+}
