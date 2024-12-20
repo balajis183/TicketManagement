@@ -22,7 +22,7 @@ function NavRoutes() {
           <Route path="/login" element={<Login />} />
           <Route path="/places" element={<Places />} />
           <Route path="/places/:id" element={<TicketBookPage />} />
-
+          {/* <Route path="/tickets" element={<TicketBookPage/>}/> */}
           
         </Routes>
       </BrowserRouter>

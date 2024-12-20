@@ -64,7 +64,6 @@
 
 // export default TicketBookPage;
 
-
 import React, { useEffect, useState } from "react";
 import Layout from "../Components/Layout";
 import { useParams } from "react-router-dom";
@@ -72,7 +71,7 @@ import axios from "axios";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 function TicketBookPage() {
   const [place, setPlace] = useState("");
-  const [user, setUser] = useState("");
+  const [userName, setUser] = useState("");
   const [from, setFrom] = useState("");
   const [seats, setSeats] = useState("");
   const { id } = useParams();
@@ -89,9 +88,24 @@ function TicketBookPage() {
       });
   }, [id]);
 
-  function handleSubmit() {
-    const formObj = { user, from, seats };
+  function handleSubmit(event) {
+    const formObj = { userName, from, seats };
+    console.log(formObj);
+    axios
+      .post("http://localhost:8000/tickets/createTicket", formObj)
+
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    event.preventDefault();
   }
+
+
+  
   return (
     <Layout>
       {/* {console.log(place)} */}
@@ -101,7 +115,7 @@ function TicketBookPage() {
         className="d-flex justify-content-center flex-column align-items-center"
       >
         <div className="mb-3">
-          <label htmlFor="" className="form-label">
+          <label htmlFor="userName" className="form-label">
             User Name
           </label>
           <input
@@ -114,7 +128,7 @@ function TicketBookPage() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="" className="form-label">
+          <label htmlFor="from" className="form-label">
             From
           </label>
           <input
@@ -127,7 +141,7 @@ function TicketBookPage() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="" className="form-label">
+          <label htmlFor="seats" className="form-label">
             Seats
           </label>
           <input
